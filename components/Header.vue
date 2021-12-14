@@ -23,7 +23,7 @@ export default {
   name: "Header",
   data() {
     return {
-      bg: "app-bar-transparent",
+      bg: "app-bar",
       items: [
         {
           title: "Guide",
@@ -36,23 +36,23 @@ export default {
       ],
     };
   },
-  mounted() {
-    window.onscroll = () => {
-      this.changeColor();
-    };
-  },
-  methods: {
-    changeColor() {
-      if (
-        document.body.scrollTop > 100 ||
-        document.documentElement.scrollTop > 100
-      ) {
-        this.bg = "app-bar";
-      } else {
-        this.bg = "app-bar-transparent";
-      }
-    },
-  },
+  // mounted() {
+  //   window.onscroll = () => {
+  //     this.changeColor();
+  //   };
+  // },
+  // methods: {
+  //   changeColor() {
+  //     if (
+  //       document.body.scrollTop > 100 ||
+  //       document.documentElement.scrollTop > 100
+  //     ) {
+  //       this.bg = "app-bar";
+  //     } else {
+  //       this.bg = "app-bar-transparent";
+  //     }
+  //   },
+  // },
 };
 </script>
 
@@ -63,6 +63,7 @@ export default {
   -moz-background-size: cover;
   -o-background-size: cover;
   background: url("../static/top-section.jpg") center top no-repeat;
+  box-shadow: none;
 }
 
 #app-bar-transparent {
